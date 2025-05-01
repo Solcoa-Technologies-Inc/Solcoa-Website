@@ -1,103 +1,177 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Nav from "@/components/nav";
+import TextScroll from "@/components/text-scroll";
+import Blink from "@/components/blink";
+import AccentSpinner from "@/components/accent-spinner";
+import SectionHeader from "@/components/section-header";
+import FadeInContainer from "@/components/fade-in-container";
+import GradientText from "@/components/gradient-text";
+import SampleButton from "@/components/sample-btn";
+import { ArrowDown } from "lucide-react";
+import Footer from "@/components/footer";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const elements = [
+    {
+      symbol: "Nd",
+      name: "Neodymium",
+      mass: "144.242",
+      number: 60,
+    },
+    {
+      symbol: "Dy",
+      name: "Dysprosium",
+      mass: "162.500",
+      number: 66,
+    },
+    {
+      symbol: "Tb",
+      name: "Terbium",
+      mass: "158.925",
+      number: 65,
+    },
+    {
+      symbol: "Pr",
+      name: "Praseodymium",
+      mass: "140.907",
+      number: 59,
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  return (
+    <div className="flex flex-col items-center px-8 md:px-20 bg-black text-white">
+      <div className="flex flex-col min-h-screen w-full max-w-screen-3xl">
+        <Nav />
+        <header className="relative min-h-screen">
+          <div className="flex justify-between items-center mt-2 text-white/50 font-mono tracking-tight">
+            <p className="hidden md:block">California, United States 🌴</p>
+            <div className="md:ml-auto flex gap-2 items-center">
+              <Blink />
+              <p>Production Active</p>
+            </div>
+          </div>
+          <div className="mt-32 text-3xl sm:text-[45px] md:text-[50px] lg:text-[80px] font-['Manrope'] font-medium tracking-tighter">
+            <GradientText>
+              <h1 className="max-w-[800px]">
+                The world's first carbon-zero rare earths
+              </h1>
+            </GradientText>
+            <TextScroll
+              text={[
+                "Built for Scale",
+                "Zero Reliance on China",
+                "Independently American",
+              ]}
+              className="mt-4 md:text-inherit"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <AccentSpinner className="absolute bottom-32 -right-4" />
+          </div>
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-40 md:hidden">
+            <ArrowDown className="w-6 h-6 stroke-neutral-600" />
+          </div>
+        </header>
+        <FadeInContainer>
+          <section className="pt-16 pb-20 relative" id="products">
+            <SectionHeader title="products" />
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-12 max-w-md lg:max-w-4xl mx-auto relative">
+              {elements.map((element) => (
+                <div
+                  key={element.symbol}
+                  className="flex flex-col items-center border-2 border-white aspect-square relative overflow-clip group/element"
+                >
+                  <div className="absolute w-1/2 h-[200%] -top-1/2 -left-1/2 group-hover/element:left-4/5 bg-gradient-to-r from-black/0 via-50% via-white/15 to-black/0  rotate-[30deg] transition-all duration-300" />
+                  <p className="absolute top-4 left-4 text-xl">
+                    {element.number}
+                  </p>
+                  <div className="flex flex-col gap-4 items-center justify-center h-full">
+                    <p className="text-6xl font-medium">{element.symbol}</p>
+                    <div className="flex flex-col items-center">
+                      <p className=" font-bold text-xl">{element.name}</p>
+                      <p className="text-sm">{element.mass}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral-200/15 via-neutral-200/0 to-black/25 pointer-events-none" />
+            </div>
+
+            <div className="mt-16 text-2xl flex flex-col gap-4">
+              <GradientText className="bg-gradient-to-l to-white/75">
+                <p>
+                  Solcoa delivers high-grade rare earth metals <br />
+                  100% American, sustainable, and reliable.
+                </p>
+              </GradientText>
+              <p className="font-bold">
+                Secure your supply chain <span className="italic">today</span>.
+              </p>
+              <div className="flex gap-2 w-full justify-center sm:justify-start">
+                <SampleButton />
+
+                <Link href="mailto:sales@solcoa.com" target="_blank">
+                  <Button variant="outline" size="lg">
+                    Contact Sales
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <AccentSpinner className="absolute bottom-0 -right-4" />
+          </section>
+        </FadeInContainer>
+        <FadeInContainer>
+          <section className="pt-16 relative" id="backing">
+            <SectionHeader title="rock solid backing" />
+            <div className="mt-24 grid grid-cols-3 gap-8 md:gap-12 max-w-xl mx-auto">
+              <div className="h-12 w-full">
+                <img
+                  className="w-full h-full object-contain"
+                  src="images/investors/8090.webp"
+                  alt="8090 Industries"
+                />
+              </div>
+              <div className="h-12 w-full">
+                <img
+                  className="w-full h-full object-contain"
+                  src="images/investors/gigascale.svg"
+                  alt="Gigascale"
+                />
+              </div>
+              <div className="h-12 w-full">
+                <img
+                  className="w-full h-full object-contain"
+                  src="images/investors/1517.webp"
+                  alt="1517 Fund"
+                />
+              </div>
+            </div>
+            <div className="mt-12 text-center text-white/50">and others...</div>
+
+            <AccentSpinner className="absolute bottom-0 -right-4" />
+          </section>
+        </FadeInContainer>
+        <FadeInContainer>
+          <section className="pt-16 pb-20 relative" id="careers">
+            <SectionHeader title="careers" />
+            <div className="mt-24 flex flex-col gap-8 items-center md:flex-row md:justify-between">
+              <p className="text-2xl text-center md:text-left">
+                Join the team powering America's green rare earth future.
+              </p>
+              <Link
+                href="mailto:jobs@solcoa.tech?subject=JOB%20INQUIRY%20-%20%5BYOUR%20NAME%5D&body=Tell%20us%20about%20something%20exceptional%20you've%20done%2C%20what%20are%20you%20most%20proud%20of%3F"
+                target="_blank"
+              >
+                <Button variant="outline" size="lg">
+                  Build the Future
+                </Button>
+              </Link>
+            </div>
+          </section>
+        </FadeInContainer>
+      </div>
+      <Footer />
     </div>
   );
 }
