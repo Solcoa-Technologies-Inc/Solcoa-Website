@@ -51,6 +51,7 @@ export default function Nav() {
             "md:hidden fixed inset-0 text-neutral-400 bg-black/75 z-10 transition-all duration-300 opacity-0 pointer-events-none",
             isOpen && "opacity-100 pointer-events-auto"
           )}
+          onClick={() => setIsOpen(false)}
         >
           <div className="absolute top-60 px-8 flex flex-col gap-4 text-right w-full text-3xl">
             {links.map((link) => (
