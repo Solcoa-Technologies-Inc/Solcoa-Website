@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Nav from "@/components/nav";
 import TextScroll from "@/components/text-scroll";
@@ -55,7 +54,7 @@ export default function Home() {
           <div className="mt-32 text-3xl sm:text-[45px] md:text-[50px] lg:text-[80px] font-['Manrope'] font-medium tracking-tighter">
             <GradientText>
               <h1 className="max-w-[800px]">
-                The world's first carbon-zero rare earths
+                The world&apos;s first carbon-zero rare earths
               </h1>
             </GradientText>
             <TextScroll
@@ -157,7 +156,7 @@ export default function Home() {
             <SectionHeader title="careers" />
             <div className="mt-24 flex flex-col gap-8 items-center md:flex-row md:justify-between">
               <p className="text-2xl text-center md:text-left">
-                Join the team powering America's green rare earth future.
+                Join the team powering America&apos;s green rare earth future.
               </p>
               <Link
                 href="mailto:jobs@solcoa.tech?subject=JOB%20INQUIRY%20-%20%5BYOUR%20NAME%5D&body=Tell%20us%20about%20something%20exceptional%20you've%20done%2C%20what%20are%20you%20most%20proud%20of%3F"

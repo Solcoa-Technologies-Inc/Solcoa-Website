@@ -1,8 +1,4 @@
-import AccentSpinner from "@/components/accent-spinner";
-import Blink from "@/components/blink";
 import GradientText from "@/components/gradient-text";
-import TextScroll from "@/components/text-scroll";
-import { ArrowDown } from "lucide-react";
 
 export default function Confidentiality() {
   return (
@@ -30,8 +26,8 @@ export default function Confidentiality() {
               otherwise transmitted to any unauthorized individuals or entities
               without explicit approval from an authorized representative of
               Solcoa Industries. Under no circumstances shall this information
-              be disclosed to entities or residents located within the People's
-              Republic of China or the Russian Federation.
+              be disclosed to entities or residents located within the
+              People&apos;s Republic of China or the Russian Federation.
             </p>
           </div>
         </section>
