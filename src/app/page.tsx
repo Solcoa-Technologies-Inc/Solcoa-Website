@@ -10,6 +10,7 @@ import GradientText from "@/components/gradient-text";
 import SampleButton from "@/components/sample-btn";
 import { ArrowDown } from "lucide-react";
 import Footer from "@/components/footer";
+import SalesLink from "@/components/sales-link";
 
 export default function Home() {
   const elements = [
@@ -119,11 +120,11 @@ export default function Home() {
               <div className="flex gap-2 w-full justify-center sm:justify-start">
                 <SampleButton />
 
-                <Link href="mailto:sales@solcoa.tech" target="_blank">
+                <SalesLink>
                   <Button variant="outline" size="lg">
                     Contact Sales
                   </Button>
-                </Link>
+                </SalesLink>
               </div>
             </div>
 

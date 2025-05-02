@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, DM_Mono } from "next/font/google";
 import "./globals.css";
 import BackgroundLines from "@/components/bg";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -30,8 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${geistMono.variable} antialiased`}>
-        <BackgroundLines className="fixed inset-0 px-8 md:px-16" />
-        {children}
+        <PostHogProvider>
+          <BackgroundLines className="fixed inset-0 px-8 md:px-16" />
+          {children}
+        </PostHogProvider>
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+import posthog from "posthog-js";
+
 export const links = [
   {
     label: "products",
@@ -19,5 +21,8 @@ export const links = [
     target: "_blank",
     mobileOnly: false,
     emphasized: true,
+    onClick: () => {
+      posthog.capture("sales_link_clicked");
+    },
   },
 ];

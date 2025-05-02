@@ -39,6 +39,7 @@ export default function Footer() {
               key={link.label}
               href={link.href}
               target={link.target}
+              onClick={link.onClick}
               className="text-white/50 hover:text-white transition-all duration-300"
             >
               {link.label}
