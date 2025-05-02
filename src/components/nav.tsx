@@ -33,6 +33,7 @@ export default function Nav() {
                 key={link.label}
                 href={link.href}
                 target={link.target}
+                onClick={link.onClick}
                 className={cn(
                   "text-white/50 hover:text-white transition-all duration-300",
                   link.emphasized &&
@@ -59,10 +60,11 @@ export default function Nav() {
                 key={link.label}
                 href={link.href}
                 target={link.target}
+                onClick={link.onClick}
                 className={cn(
                   "w-full py-1 hover:text-white transition-all",
                   link.emphasized &&
-                    "text-green-vibrant hover:underline hover:text-green-vibrant"
+                    "text-purple-vibrant hover:underline hover:text-purple-vibrant"
                 )}
               >
                 {link.label}

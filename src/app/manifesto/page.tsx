@@ -48,9 +48,9 @@ export default function Confidentiality() {
                 conventional processes.
               </p>
               <p className="mt-8 text-xl text-white/75">
-                The challenge today isn't supply—it's processing. The dominance
-                of which is precisely where China now wields a dangerous
-                political weapon.
+                The challenge today isn&apos;t supply&mdash;it&apos;s
+                processing. The dominance of which is precisely where China now
+                wields a dangerous political weapon.
               </p>
               <p className="mt-8 text-xl text-white/75">
                 In response, some companies have reverted to the outdated,
@@ -108,22 +108,6 @@ export default function Confidentiality() {
         <Footer />
       </div>
     </div>
-  );
-}
-
-function U({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <span
-      className={cn("underline underline-offset-2 decoration-2", className)}
-    >
-      {children}
-    </span>
   );
 }
 
