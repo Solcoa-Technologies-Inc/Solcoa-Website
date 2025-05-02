@@ -16,6 +16,13 @@ export const links = [
     emphasized: false,
   },
   {
+    label: "manifesto",
+    href: "/manifesto",
+    target: "_self",
+    mobileOnly: false,
+    emphasized: false,
+  },
+  {
     label: "sales",
     href: "mailto:sales@solcoa.tech",
     target: "_blank",
