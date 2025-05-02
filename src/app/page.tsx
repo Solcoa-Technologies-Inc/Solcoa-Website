@@ -119,7 +119,7 @@ export default function Home() {
               <div className="flex gap-2 w-full justify-center sm:justify-start">
                 <SampleButton />
 
-                <Link href="mailto:sales@solcoa.com" target="_blank">
+                <Link href="mailto:sales@solcoa.tech" target="_blank">
                   <Button variant="outline" size="lg">
                     Contact Sales
                   </Button>
@@ -164,7 +164,7 @@ export default function Home() {
         <FadeInContainer>
           <section className="pt-16 pb-20 relative" id="careers">
             <SectionHeader title="careers" />
-            <div className="mt-24 flex flex-col gap-8 items-center md:flex-row md:justify-between">
+            <div className="mt-24 flex flex-col gap-8 items-center md:flex-row md:justify-between max-w-md lg:max-w-4xl mx-auto">
               <p className="text-2xl text-center md:text-left">
                 Join the team powering America&apos;s green rare earth future.
               </p>
