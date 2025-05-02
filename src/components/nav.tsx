@@ -39,7 +39,7 @@ export default function Nav() {
                 className={cn(
                   "text-white/50 hover:text-white transition-all duration-300",
                   link.emphasized &&
-                    "text-purple-vibrant hover:underline hover:text-purple-vibrant"
+                    "text-blue-neo hover:underline hover:text-blue-neo"
                 )}
               >
                 {link.label}

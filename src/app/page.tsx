@@ -168,7 +168,7 @@ export default function Home() {
             <div className="mt-24 flex flex-col gap-8 items-center md:flex-row md:justify-between max-w-md lg:max-w-4xl mx-auto">
               <p className="text-2xl text-center md:text-left">
                 Join the team powering America&apos;s future of{" "}
-                <span className="text-[#8e6657] font-bold">green</span> rare
+                <span className="text-blue-neo font-bold">clean</span> rare
                 earths.
               </p>
               <Link
