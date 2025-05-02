@@ -106,7 +106,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral-200/15 via-neutral-200/0 to-black/25 pointer-events-none" />
             </div>
 
-            <div className="mt-16 text-2xl flex flex-col gap-4">
+            <div className="mt-16 text-2xl flex flex-col gap-4 max-w-md lg:max-w-4xl mx-auto">
               <GradientText className="bg-gradient-to-l to-white/75">
                 <p>
                   Solcoa delivers high-grade rare earth metals <br />
