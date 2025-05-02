@@ -59,9 +59,9 @@ export default function Confidentiality() {
               </p>
 
               <blockquote className=" pl-8 py-2 border-l-4 border-purple-vibrant/60 mt-8 text-2xl md:text-3xl font-semibold text-white/75">
-                Our domestic rare earth output remains negligible,{" "}
+                Our domestic rare earth output remains negligible.{" "}
                 <Pg className="font-black bg-purple-vibrant/90">
-                  and we can&mdash;and must&mdash;do better.
+                  We can&mdash;and must&mdash;do better.
                 </Pg>
               </blockquote>
 
@@ -71,22 +71,7 @@ export default function Confidentiality() {
                 this story.
               </p>
 
-              <p className="mt-8 text-xl text-white/75">
-                We are a team of fast, young, ambitious engineers, chemists, and
-                metallurgists. Our goal is clear: to breathe new life into this
-                vital industry by stabilizing and decarbonizing the supply
-                chain.
-              </p>
-              <p className="mt-8 text-xl font-semibold text-white/75">
-                We stand for relentless innovation, environmental stewardship,
-                <br />
-                <Pg className="font-black"> and putting America first.</Pg>
-              </p>
-              <p className="mt-8 text-xl text-white/75">
-                Above all, we stand for dismantling the sluggish status quo.
-              </p>
-
-              <div className="mt-8">
+              <div className="mt-16 mb-16">
                 <div className="border-b pb-4">
                   <h3 className="text-5xl font-bold font-serif">
                     <Pg className="bg-purple-vibrant">Sol</Pg>
@@ -102,6 +87,37 @@ export default function Confidentiality() {
                   &mdash; Breaking down the old to build something new.
                 </p>
               </div>
+
+              <p className="mt-8 text-xl text-white/75">
+                We are a team of fast, young, ambitious engineers, chemists, and
+                metallurgists. Our goal is clear: to breathe new life into this
+                vital industry by stabilizing and decarbonizing the supply
+                chain.
+              </p>
+              <p className="mt-8 text-xl font-semibold text-white/75">
+                We stand for relentless innovation, environmental stewardship,
+                <br />
+                <Pg className="font-black"> and putting America first.</Pg>
+              </p>
+              <p className="mt-8 text-xl text-white/75">
+                Above all, we stand for dismantling the sluggish status quo.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-8 h-12 w-full mt-8 pt-4">
+            <div className="h-10 w-fit">
+              <img
+                src="/images/signatures/hooman.webp"
+                alt="Hooman"
+                className="h-full w-full object-contain rounded-full invert"
+              />
+            </div>
+            <div className="h-10 w-fit">
+              <img
+                src="/images/signatures/artem.webp"
+                alt="Artem"
+                className="h-full w-full object-contain rounded-full invert"
+              />
             </div>
           </div>
         </section>

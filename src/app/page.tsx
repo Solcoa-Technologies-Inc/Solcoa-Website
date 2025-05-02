@@ -56,7 +56,7 @@ export default function Home() {
               <p>Production Active</p>
             </div>
           </div>
-          <div className="mt-32 text-3xl sm:text-[45px] md:text-[50px] lg:text-[80px] font-['Manrope'] font-medium tracking-tighter">
+          <div className="mt-[calc(40vh-6rem)] text-3xl sm:text-[45px] md:text-[50px] lg:text-[80px] font-['Manrope'] font-medium tracking-tighter">
             <GradientText>
               <h1 className="max-w-[800px]">
                 The world&apos;s first carbon-zero rare earths

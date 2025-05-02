@@ -14,6 +14,9 @@ export default function TextScroll({ text, className }: Props) {
 
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const [rotations, setRotations] = useState(0);
+  const secondLastTextRef = useRef(null);
+
   useEffect(() => {
     const maxIndex = text.length;
     let timeoutId: NodeJS.Timeout;
@@ -34,13 +37,24 @@ export default function TextScroll({ text, className }: Props) {
             containerRef.current.style.translate = "0 0";
           }
           setCurrentTextIndex(0);
+          setRotations((rotations) => rotations + 1);
         }
       }, delay);
     };
 
+    if (secondLastTextRef.current) {
+      if (rotations % 1000 === 999) {
+        // @ts-expect-error - second last text is not used
+        secondLastTextRef.current.innerText = "China Cooked 💀😭";
+      } else {
+        // @ts-expect-error - second last text is not used
+        secondLastTextRef.current.innerText = text[text.length - 2];
+      }
+    }
+
     scheduleNext();
     return () => clearTimeout(timeoutId);
-  }, [text, currentTextIndex]);
+  }, [text, currentTextIndex, rotations]);
 
   return (
     <div className={cn("overflow-hidden h-[1.1em]", className)}>
@@ -55,7 +69,11 @@ export default function TextScroll({ text, className }: Props) {
         }}
       >
         {text.map((t, i) => (
-          <div key={i} className="whitespace-nowrap h-[1.5em]">
+          <div
+            key={i}
+            className="whitespace-nowrap h-[1.5em]"
+            ref={i === text.length - 2 ? secondLastTextRef : null}
+          >
             {t}
           </div>
         ))}
