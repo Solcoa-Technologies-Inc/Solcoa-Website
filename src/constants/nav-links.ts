@@ -3,14 +3,14 @@ import posthog from "posthog-js";
 export const links = [
   {
     label: "products",
-    href: "#products",
+    href: "/#products",
     target: "_self",
     mobileOnly: false,
     emphasized: false,
   },
   {
     label: "careers",
-    href: "#careers",
+    href: "/#careers",
     target: "_self",
     mobileOnly: false,
     emphasized: false,

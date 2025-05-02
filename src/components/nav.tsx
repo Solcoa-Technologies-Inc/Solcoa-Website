@@ -19,11 +19,13 @@ export default function Nav() {
       >
         <NavProgress className={cn(isOpen && "hidden")} />
 
-        <img
-          src="/images/logo.svg"
-          alt="Solcoa Industries"
-          className="h-full cursor-pointer"
-        />
+        <Link href="/" className="h-full">
+          <img
+            src="/images/logo.svg"
+            alt="Solcoa Industries"
+            className="h-full cursor-pointer"
+          />
+        </Link>
 
         <div className="hidden md:flex gap-12">
           {links
