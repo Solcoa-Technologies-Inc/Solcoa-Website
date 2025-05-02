@@ -167,7 +167,9 @@ export default function Home() {
             <SectionHeader title="careers" />
             <div className="mt-24 flex flex-col gap-8 items-center md:flex-row md:justify-between max-w-md lg:max-w-4xl mx-auto">
               <p className="text-2xl text-center md:text-left">
-                Join the team powering America&apos;s green rare earth future.
+                Join the team powering America&apos;s future of{" "}
+                <span className="text-[#8e6657] font-bold">green</span> rare
+                earths.
               </p>
               <Link
                 href="mailto:jobs@solcoa.tech?subject=JOB%20INQUIRY%20-%20%5BYOUR%20NAME%5D&body=Tell%20us%20about%20something%20exceptional%20you've%20done%2C%20what%20are%20you%20most%20proud%20of%3F"
