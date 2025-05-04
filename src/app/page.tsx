@@ -110,7 +110,8 @@ export default function Home() {
             <div className="mt-16 text-2xl flex flex-col gap-4 max-w-md lg:max-w-4xl mx-auto">
               <GradientText className="bg-gradient-to-l to-white/75">
                 <p>
-                  Solcoa delivers high-grade rare earth metals <br />
+                  Solcoa delivers high-grade rare earth metals.
+                  <br />
                   100% American, sustainable, and reliable.
                 </p>
               </GradientText>
