@@ -41,7 +41,7 @@ const ebGaramond = EB_Garamond({
 
 export const metadata: Metadata = {
   title: "Solcoa Industries",
-  description: "Green, American Rare Earths",
+  description: "Solcoa Industries is helping reclaim Western industrial independence by producing the first carbon-zero, American-made rare earth metals at scale.",
   icons: {
     icon: "/favicon.png",
   },
