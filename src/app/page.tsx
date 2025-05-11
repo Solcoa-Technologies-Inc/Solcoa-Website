@@ -45,7 +45,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center px-8 md:px-20 bg-black text-white">
+    <div className="flex flex-col w-full items-center px-8 md:px-20">
       <div className="flex flex-col min-h-screen w-full max-w-screen-3xl">
         <Nav />
         <header className="relative min-h-screen">

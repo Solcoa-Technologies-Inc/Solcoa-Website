@@ -1,0 +1,79 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/@prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Role {
+  id    String @id @default(uuid())
+  title String
+
+  description  String
+  category     String
+  contractType String
+  location     String?
+  locationType String
+  compensation String?
+
+  questions    ApplicationQuestion[] // Default: name, email, resume, linkedin
+  applications Application[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ApplicationQuestion {
+  id     String @id @default(uuid())
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id])
+
+  question  String
+  maxLength Int?
+
+  yesNo Boolean // Is it a yes/no question instead of a text question?
+
+  answers ApplicationQuestionAnswer[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Application {
+  id     String @id @default(uuid())
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id])
+
+  name        String
+  email       String
+  resumeUrl   String
+  linkedinUrl String
+
+  answers ApplicationQuestionAnswer[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ApplicationQuestionAnswer {
+  id            String      @id @default(uuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id])
+
+  questionId String
+  question   ApplicationQuestion @relation(fields: [questionId], references: [id])
+
+  answer String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

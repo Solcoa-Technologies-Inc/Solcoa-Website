@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${geistMono.variable} ${shadowsIntoLight.variable} ${bebasNeue.variable} ${ebGaramond.variable} antialiased`}
+        className={`${manrope.variable} ${geistMono.variable} ${shadowsIntoLight.variable} ${bebasNeue.variable} ${ebGaramond.variable} antialiased bg-black text-white`}
       >
         <PostHogProvider>
           <BackgroundLines className="fixed inset-0 px-8 md:px-16" />
